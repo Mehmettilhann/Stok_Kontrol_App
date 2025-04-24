@@ -44,6 +44,7 @@ namespace Stok_Kontrol_V2
             try
             {
                 // mySqlConnection.Open(); // Bu satırı kaldırın
+                
                 string query = "SELECT * FROM urunler";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, mySqlConnection);
                 DataTable dt = new DataTable();
@@ -111,6 +112,7 @@ namespace Stok_Kontrol_V2
                     MessageBox.Show("Ürün başarıyla silindi.");
 
                     // DataGridView'i güncelle
+                    
                     mySqlConnection.Close(); // Bağlantıyı kapatın
                     VeriYukle(); // Ardından VeriYukle metodunu çağırın
                 }
